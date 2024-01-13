@@ -11,6 +11,11 @@ function App() {
 
   let [stateVar,setStateVar] = useState('대구 치과 추천');
   let [arrayStateVar,setArrayStateVar] = useState(['내용1', '내용2']);
+  let [likeCount, setLikeCount] = useState(0)
+
+  function likeFunc(){
+    console.log("like clicked")
+  }
 
   return (
     <div className="App">
@@ -23,6 +28,7 @@ function App() {
 
       <div className="list">
         <h4>{ arrayStateVar[0] }</h4>
+        <span onClick = { likeFunc }>👍</span> {likeCount}
       </div>
       <div className="list">
         <h4>{ arrayStateVar[1] }</h4>
