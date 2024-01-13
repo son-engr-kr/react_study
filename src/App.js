@@ -2,22 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let post = '대구 치과 맛집';//서버에서 데이터 가져왔다 가정
+  // document.querySelector('h4').innerHTML = post;//원래라면 이렇게 했을 것
+  let idTest = "id-test";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="my-first-css-class">
+        <h4 id = {idTest}>제목임</h4>
+      </div>
+      <h4>글제목: {post}</h4>
+      <p>글은 여기에 쓰면 됩니다.</p>
     </div>
   );
 }

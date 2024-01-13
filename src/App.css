@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+
+.my-first-css-class{
+  display: flex;
+  background: black;
+  width: 100%;
+  color:#ffffff;
+  padding-left: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
