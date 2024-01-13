@@ -10,6 +10,7 @@ function App() {
 
 
   let [stateVar,setStateVar] = useState('대구 치과 추천');
+  let [arrayStateVar,setArrayStateVar] = useState(['내용1', '내용2']);
 
   return (
     <div className="App">
@@ -18,6 +19,14 @@ function App() {
       </div>
       <h4>글제목: {post}</h4>
       <p>글은 여기에 쓰면 됩니다.</p>
+
+
+      <div className="list">
+        <h4>{ arrayStateVar[0] }</h4>
+      </div>
+      <div className="list">
+        <h4>{ arrayStateVar[1] }</h4>
+      </div>
     </div>
   );
 }
