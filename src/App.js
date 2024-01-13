@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="my-first-css-class">
-        <h4 id = {idTest}>제목임</h4>
+        <h4 id = {idTest} style={{color : '#ff0000', fontSize:'36px'}}>제목임</h4>
       </div>
       <h4>글제목: {post}</h4>
       <p>글은 여기에 쓰면 됩니다.</p>
