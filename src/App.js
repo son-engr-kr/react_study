@@ -24,7 +24,7 @@ function App() {
 
       <div className="list">
         <h4>{ arrayStateVar[0] }</h4>
-        <span onClick = { () => {console.log("like clicked")} }>👍</span> {likeCount}
+        <span onClick = { () => { setLikeCount(likeCount + 1) } }>👍</span> {likeCount}
       </div>
       <div className="list">
         <h4>{ arrayStateVar[1] }</h4>
