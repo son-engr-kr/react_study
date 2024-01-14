@@ -19,6 +19,7 @@ function App() {
         <h4 id = {idTest} style={{color : '#ff0000', fontSize:'36px'}}>제목임</h4>
       </div>
       <h4>글제목: {post}</h4>
+      <PropsTest title="This is title prop"></PropsTest>
       <p>글은 여기에 쓰면 됩니다.</p>
 
 
@@ -42,6 +43,14 @@ function App() {
       
     </div>
   );
+}
+
+function PropsTest(props){
+  return (
+    <>
+      <a href = "/">{props.title}</a>
+    </>
+  )
 }
 
 function Modal(){
