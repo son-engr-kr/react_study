@@ -10,7 +10,19 @@
   color:#ffffff;
   padding-left: 20px;
 }
-
+.list{
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffeeee;
+  text-align: left;
+  border-bottom: 1px solid #333333;
+}
+.modal{
+  margin-top: 20px;
+  padding: 20px;
+  background: #eeeeee;
+  text-align: left;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
