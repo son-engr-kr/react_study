@@ -23,11 +23,19 @@ function App() {
 
 
       <div className="list">
-        <h4>{ arrayStateVar[0] }</h4>
+        <h4 onClick = { () => { 
+          let arrayCopy = [...arrayStateVar];
+          arrayCopy[0] = `클릭이 ${likeCount}번 된 게시물`;
+          setArrayStateVar(arrayCopy);
+         }}>{ arrayStateVar[0] }</h4>
         <span onClick = { () => { setLikeCount(likeCount + 1) } }>👍</span> {likeCount}
       </div>
       <div className="list">
-        <h4>{ arrayStateVar[1] }</h4>
+        <h4 onClick = { () => { 
+          let arrayCopy = [...arrayStateVar];
+          arrayCopy[1] = `클릭이 ${likeCount}번 된 게시물`;
+          setArrayStateVar(arrayCopy);
+         }}>{ arrayStateVar[1] }</h4>
       </div>
     </div>
   );
