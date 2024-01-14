@@ -13,6 +13,13 @@ function App() {
   let [arrayStateVar,setArrayStateVar] = useState(['내용1', '내용2']);
   let [likeCount, setLikeCount] = useState(0)
 
+  const topics = [
+    {id:1, title: 'html', body:"html is ..."},
+    {id:2, title: 'css', body:"css is ..."},
+    {id:3, title: 'js', body:"js is ..."},
+  ]
+
+
   return (
     <div className="App">
       <div className="my-first-css-class">
@@ -40,11 +47,36 @@ function App() {
       </div>
 
       <Modal></Modal>
+
+
+      <Wee topics = {topics}></Wee>
+
       
     </div>
   );
 }
+function Wee(props){
+  const lis = []
+  for(let idx = 0; idx < props.topics.length; idx++){
+    let t = props.topics[idx];
+    lis.push(<li key={t.id}> 
+      <a href={`/read/${t.id}`}>{t.title}</a>
+    </li>)
+  } 
+  return <nav>
+    <ol>
+      {lis}
+    </ol>
+  </nav>
+}
+function ListProp(){
+  
+  return (
+    <div>
 
+    </div>
+  )
+}
 function PropsTest(props){
   return (
     <>
