@@ -49,21 +49,22 @@ function App() {
       <Modal></Modal>
 
 
-      <Wee topics = {topics}></Wee>
+      <PropWithTitle topics = {topics} title = "This is title"></PropWithTitle>
 
       
     </div>
   );
 }
-function Wee(props){
+function PropWithTitle({title, topics}){
   const lis = []
-  for(let idx = 0; idx < props.topics.length; idx++){
-    let t = props.topics[idx];
+  for(let idx = 0; idx < topics.length; idx++){
+    let t = topics[idx];
     lis.push(<li key={t.id}> 
       <a href={`/read/${t.id}`}>{t.title}</a>
     </li>)
   } 
   return <nav>
+    <p>{title}</p>
     <ol>
       {lis}
     </ol>
